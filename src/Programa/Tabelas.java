@@ -115,7 +115,7 @@ public class Tabelas extends javax.swing.JPanel {
         // TODO add your handling code here:
         InserirCel cel = new InserirCel(null, true);
         cel.setVisible(true);
-        this.
+        
         
         
         
