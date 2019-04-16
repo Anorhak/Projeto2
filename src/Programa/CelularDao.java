@@ -40,6 +40,10 @@ public class CelularDao {
         } 
         return listacel;    
     }
+    public void editarCel(){
+        
+        
+    }
     
 
 }
