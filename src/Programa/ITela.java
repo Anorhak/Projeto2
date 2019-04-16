@@ -9,11 +9,7 @@ package Programa;
  *
  * @author Everton
  */
-class ServicoMenu extends Menu {
-
-    public ServicoMenu() {
-        
-    }
-
+public interface ITela {
     
+    public void executar();
 }

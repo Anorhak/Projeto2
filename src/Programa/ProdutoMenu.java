@@ -9,11 +9,11 @@ package Programa;
  *
  * @author Everton
  */
-class ServicoMenu extends Menu {
+class ProdutoMenu extends Menu {
 
-    public ServicoMenu() {
-        
+    public ProdutoMenu() {
     }
 
+  
     
 }

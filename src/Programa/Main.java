@@ -20,6 +20,8 @@ public class Main {
         
         
         int vmenu;
+        
+        new MenuPrincipal().executar();
         do{
             System.out.println("----------------MENU---------------");
             System.out.println("1-Celulares");

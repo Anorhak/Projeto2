@@ -9,14 +9,9 @@ package Programa;
  *
  * @author Everton
  */
-class FuncionarioMenu implements Menu {
+class FuncionarioMenu  extends Menu {
 
     public FuncionarioMenu() {
-    }
-
-    @Override
-    public void executar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
