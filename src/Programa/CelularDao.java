@@ -18,7 +18,7 @@ public class CelularDao {
     }
 
     public void pesquisarcd(String cd) {
-        for (int i = 0; i <= vcel.length; i++) {
+        for (int i = 0; i < vcel.length; i++) {
             if (vcel[i].getCd() == cd) {
                 System.out.println("Marca: " + vcel[i].getMarca());
                 System.out.println("Modelo: " + vcel[i].getModelo());
