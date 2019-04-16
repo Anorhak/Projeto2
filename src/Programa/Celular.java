@@ -5,7 +5,7 @@ public class Celular {
     private String marca;
     private String cd;
 
-    public Celular(String modelo, String marca) {
+    public Celular(String modelo, String marca, String cd) {
         this.modelo = modelo;
         this.marca = marca;
         this.cd = cd;
