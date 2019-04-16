@@ -15,17 +15,21 @@ public class Main {
         
         CelularDao a = new CelularDao();
         Celular exemplo = new Celular();
+        Cliente cliexemplo = new Cliente();
+        ClienteDao b = new ClienteDao();
         
         ArrayList<Celular> listaex = new ArrayList();
         
         
         int vmenu;
-        
-        new MenuPrincipal().executar();
         do{
             System.out.println("----------------MENU---------------");
             System.out.println("1-Celulares");
             System.out.println("2-Cliente");
+            
+            
+            
+            
             vmenu = sci.nextInt();
             if(vmenu == 1){
                 System.out.println("1-Criar");
@@ -33,6 +37,7 @@ public class Main {
                 System.out.println("3-Editar"); //menu
                 System.out.println("4-Excluir");
                 System.out.println("5-Voltar");
+                vmenu = sci.nextInt();
                 
                 if(vmenu == 1){
                     
@@ -83,12 +88,66 @@ public class Main {
                 }else if(vmenu==3){
                     System.out.println("Informe o código do celular");
                     String cd = scs.nextLine();
-                    
-                    
+                    System.out.println("1-Marca");
+                    System.out.println("2-Modelo");
+                    int menu = scs.nextInt();
+                    if(menu == 1){
+                        System.out.println("Informe a marca atualizada");
+                        String marca = scs.nextLine();
+                        a.editarMarca(cd,marca);
+                    }else if(menu == 2){
+                        System.out.println("Informe o modelo atualizado");
+                        String modelo = scs.nextLine();
+                        a.editarModelo(cd, modelo);
+                        
+                    }
+                }else if(vmenu == 4){
+                    System.out.println("Informe o código desejado");
+                    String cd = scs.nextLine();
+                    a.excluir(cd);
                     
                 }
                 
+            }else if(vmenu == 2){
+                System.out.println("1-Criar");
+                System.out.println("2-Ler");
+                System.out.println("3-Editar"); //menu
+                System.out.println("4-Excluir");
+                System.out.println("5-Voltar");
+                vmenu = sci.nextInt();
+                if(vmenu == 1){
+                    System.out.println("Informe o nome");
+                    cliexemplo.setNome(scs.nextLine());
+                    System.out.println("Informe o CPF");
+                    cliexemplo.setCpf(scs.nextLine());
+                    System.out.println("Informe o código");
+                    cliexemplo.setCd(scs.nextLine());
+                    b.criarCliante(cliexemplo);
+                    
+                    
+                }else if(vmenu == 2){
+                    System.out.println("1-Pesquisar por nome");
+                    System.out.println("2-Pesquisar por código");
+                    vmenu = sci.nextInt();
+                    if(vmenu == 1){
+                        System.out.println("Informe o nome");
+                        String nome = scs.nextLine();
+                        b.pesquisarNome(nome);
+                    }else if(vmenu == 2){
+                        System.out.println("Informe o código");
+                        String cd = scs.nextLine();
+                        
+                        
+                    }
+                    
+                    
+                
             }
+                
+                
+            }
+            
+            
         }while(vmenu != 0);
 
     }
