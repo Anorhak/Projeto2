@@ -24,10 +24,6 @@ public class Main {
             System.out.println("----------------MENU---------------");
             System.out.println("1-Celulares");
             System.out.println("2-Cliente");
-            
-            
-            
-            
             vmenu = sci.nextInt();
             if(vmenu == 1){
                 System.out.println("1-Criar");

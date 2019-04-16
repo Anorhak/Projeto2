@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class CelularDao {
 
-    Celular[] vcel = new Celular[5];
-    ArrayList<Celular> listacel = new ArrayList();
+   static  Celular[] vcel = new Celular[5];
+   static  ArrayList<Celular> listacel = new ArrayList();
     public boolean criarCelular(Celular exemplo) {
         boolean r = false;
         for (int i = 0; i <= vcel.length; i++) {
