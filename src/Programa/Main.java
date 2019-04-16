@@ -5,12 +5,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        
-        new Principal().setVisible(true);
-        
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                 new Principal().setVisible(true);
+            }
+        }).start();
         
         Scanner sci = new Scanner(System.in);
         Scanner scs = new Scanner(System.in);
+        Scanner teclado = scs;
         
         CelularDao a = new CelularDao();
         

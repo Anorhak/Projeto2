@@ -5,6 +5,9 @@
  */
 package Programa;
 
+import java.awt.List;
+import java.util.ArrayList;
+
 /**
  *
  * @author Everton
@@ -13,9 +16,9 @@ public class ValidarInformacoes {
     
     public boolean validarCeluluar(Celular cel){
         boolean bug = false;
-        if (cel.getMarca().matches("[A-Za-z]"));
-        
-        
+        if (cel.getMarca().matches("^[A-Za-z]$"));
         return bug;
     }
+    
+   
 }

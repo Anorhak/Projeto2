@@ -6,7 +6,7 @@ public class CelularDao {
 
     public boolean criarCelular(Celular exemplo) {
         boolean r = false;
-        for (int i = 0; i <= vcel.length; i++) {
+        for (int i = 0; i < vcel.length; i++) {
             if (vcel[i] == null) {
                 vcel[i] = exemplo;
                 r = true;

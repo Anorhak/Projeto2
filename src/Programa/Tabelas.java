@@ -5,7 +5,7 @@
  */
 package Programa;
 
-import javax.swing.CellEditor;
+
 
 /**
  *
@@ -21,7 +21,7 @@ public class Tabelas extends javax.swing.JPanel {
         initComponents();
         jTable1.setDefaultEditor(Object.class, null);
         jTable1.setRowSelectionAllowed(true);
-        
+       
     }
 
     /**
@@ -113,6 +113,11 @@ public class Tabelas extends javax.swing.JPanel {
 
     private void jInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jInserirActionPerformed
         // TODO add your handling code here:
+        InserirCel cel = new InserirCel(null, true);
+        cel.setVisible(true);
+        
+        
+        
     }//GEN-LAST:event_jInserirActionPerformed
     private Object[][] colunaTabela(){
         String coluna[][] = new String[][] {{"Teste1",null},{null,null}};       
