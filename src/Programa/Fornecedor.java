@@ -3,7 +3,7 @@ package Programa;
 public class Fornecedor {
     private String nome;
     private String cnpj;
-    private String cd;
+    private int cd;
     private String contato;
     //private String email;
 
@@ -23,13 +23,7 @@ public class Fornecedor {
         this.cnpj = cnpj;
     }
 
-    public String getCd() {
-        return cd;
-    }
 
-    public void setCd(String cd) {
-        this.cd = cd;
-    }
 
     public String getContato() {
         return contato;
@@ -37,6 +31,14 @@ public class Fornecedor {
 
     public void setContato(String contato) {
         this.contato = contato;
+    }
+
+    public int getCd() {
+        return cd;
+    }
+
+    public void setCd(int cd) {
+        this.cd = cd;
     }
 
 }

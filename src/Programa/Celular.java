@@ -3,7 +3,7 @@ package Programa;
 public class Celular {
     private String modelo;
     private String marca;
-    private String cd;
+    private int cd;
 
     public Celular(String modelo, String marca) {
         this.modelo = modelo;
@@ -31,14 +31,18 @@ public class Celular {
         this.marca = marca;
     }
 
-    public String getCd() {
+    public int getCd() {
         return cd;
     }
 
-    public void setCd(String cd) {
+    public void setCd(int cd) {
         this.cd = cd;
     }
-    
+
+
+
+
+
     
 
 }

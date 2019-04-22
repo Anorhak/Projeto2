@@ -1,5 +1,6 @@
 package PrimeiroPacote;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -13,6 +14,9 @@ public class Main {
         Scanner scs = new Scanner(System.in);
         
         CelularDao a = new CelularDao();
+        Celular exemplo = new Celular();
+        
+        ArrayList<Celular> listaex = new ArrayList();
         
         
         int vmenu;
@@ -35,10 +39,10 @@ public class Main {
                 if(vmenu == 1){
                     
                     
-                    Celular exemplo = new Celular();
+                    
                     System.out.println("Informe a marca do celular: ");
                     exemplo.setMarca(scs.nextLine());
-                    System.out.println("Informe o modelo do celular: ");    //leitura
+                    System.out.println("Informe o modelo do celular: ");    //leitura celulares
                     exemplo.setModelo(scs.nextLine());
                     System.out.println("Informe o código do celular: ");
                     exemplo.setCd(scs.nextLine()); 
@@ -54,13 +58,35 @@ public class Main {
                 }else if(vmenu == 2){
                     System.out.println("1-Pesquisar por código ");
                     System.out.println("2-Pesquisar por modelo/marca ");
+                    System.out.println("3-Voltar");
                     vmenu = sci.nextInt();
                     if(vmenu == 1){
                         
                         System.out.println("Informe o código: ");
                         String cd = scs.nextLine();
                         a.pesquisarcd(cd);
+                    }else if(vmenu == 2){
+                        System.out.println("Informe o modelo");
+                        exemplo.setModelo(scs.nextLine());
+                        System.out.println("Indforme uma marca");
+                        exemplo.setModelo(scs.nextLine());
+                        listaex = a.pesquisarmarca(exemplo);
+                        for(int i = 0; i<=listaex.size();i++){
+                            System.out.println("Código: "+listaex.get(i));
+                            System.out.println("Marca: "+listaex.get(i));
+                            System.out.println("Modelo: "+listaex.get(i));
+                            
+                        }
+                        
+                        
+                    }else{
+                        System.out.println("Não é um comando ");
                     }
+                }else if(vmenu==3){
+                    System.out.println("Informe o código do celular");
+                    String cd = scs.nextLine();
+                    
+                    
                 }
                 
             }

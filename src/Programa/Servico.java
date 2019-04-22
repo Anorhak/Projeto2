@@ -2,8 +2,8 @@ package Programa;
 
 public class Servico {
     private String nome;
-    private String preco;
-    private String cd;
+    private float preco;
+    private int cd;
 
     public String getNome() {
         return nome;
@@ -13,19 +13,19 @@ public class Servico {
         this.nome = nome;
     }
 
-    public String getPreco() {
+    public float getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(float preco) {
         this.preco = preco;
     }
 
-    public String getCd() {
+    public int getCd() {
         return cd;
     }
 
-    public void setCd(String cd) {
+    public void setCd(int cd) {
         this.cd = cd;
     }
     

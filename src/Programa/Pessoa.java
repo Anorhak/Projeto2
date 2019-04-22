@@ -3,7 +3,7 @@ package Programa;
 public class Pessoa {
     private String nome;
     private String cpf;
-    private String cd;
+    private int cd;
 
     public String getNome() {
         return nome;
@@ -21,13 +21,15 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public String getCd() {
+    public int getCd() {
         return cd;
     }
 
-    public void setCd(String cd) {
+    public void setCd(int cd) {
         this.cd = cd;
     }
+
+
     
     
     

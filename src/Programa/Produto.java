@@ -1,23 +1,15 @@
 package Programa;
 
 public class Produto {
-    private String cd;
+    private int cd;
     private String nome;
-    private String preco;
+    private float preco;
 
-    public String getPreco() {
-        return preco;
-    }
-
-    public void setPreco(String preco) {
-        this.preco = preco;
-    }
-
-    public String getCd() {
+    public int getCd() {
         return cd;
     }
 
-    public void setCd(String cd) {
+    public void setCd(int cd) {
         this.cd = cd;
     }
 
@@ -27,6 +19,14 @@ public class Produto {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
     }
     
 
