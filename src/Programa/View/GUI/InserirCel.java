@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Programa;
+package Programa.View.GUI;
 
+import Programa.Entidades.Celular;
+import Programa.Dao.CelularDao;
 import javax.swing.JOptionPane;
 
 /**

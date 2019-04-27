@@ -5,6 +5,7 @@
  */
 package Programa;
 
+import Programa.Entidades.Celular;
 import java.awt.List;
 import java.util.ArrayList;
 

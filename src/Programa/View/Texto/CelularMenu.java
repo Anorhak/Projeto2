@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Programa;
+package Programa.View.Texto;
 
 /**
  *
  * @author Everton
  */
-public class FornecedorMenu extends Menu {
+class CelularMenu extends Menu {
 
-    public FornecedorMenu() {
+    public CelularMenu() {
     }
+
     
 }

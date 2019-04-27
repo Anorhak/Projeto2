@@ -3,17 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Programa;
-
-import java.util.Scanner;
+package Programa.View.Texto;
 
 /**
  *
  * @author Everton
  */
-public class MenuPrincipal extends Menu {    
-    public MenuPrincipal() {
-        
+public class FornecedorMenu extends Menu {
+
+    public FornecedorMenu() {
     }
     
 }

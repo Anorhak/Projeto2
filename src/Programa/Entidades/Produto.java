@@ -1,4 +1,4 @@
-package Programa;
+package Programa.Entidades;
 
 public class Produto {
     private int cd;

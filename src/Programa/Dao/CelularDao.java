@@ -1,5 +1,6 @@
-package Programa;
+package Programa.Dao;
 
+import Programa.Entidades.Celular;
 import java.util.ArrayList;
 
 public class CelularDao {

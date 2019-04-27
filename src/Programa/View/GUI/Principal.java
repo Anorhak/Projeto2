@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Programa;
+package Programa.View.GUI;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -26,7 +26,7 @@ public class Principal extends javax.swing.JFrame {
         
         //Adiciona os forms ao cards
         cards.add(vazio);
-        cards.add(new Tabelas(),"Tabela 1");
+        cards.add(new TabelaProduto(),"Tabela 1");
         
         
         cards.setBounds(jBase.getBounds());

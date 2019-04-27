@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Programa;
+package Programa.View.GUI;
 
 
 
@@ -11,16 +11,16 @@ package Programa;
  *
  * @author Everton
  */
-public class Tabelas extends javax.swing.JPanel {
+public abstract class Tabelas extends javax.swing.JPanel implements ICrud {
     
+    protected String[] nomeColunas = new String[]{""};
+    protected int numeroLinhas = 3;
    
     /**
      * Creates new form Tabelas
      */
     public Tabelas() {
         initComponents();
-        jTable1.setDefaultEditor(Object.class, null);
-        jTable1.setRowSelectionAllowed(true);
        
     }
 
@@ -43,8 +43,8 @@ public class Tabelas extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(629, 442));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            colunaTabela(),
-            nomeColunas()
+            nomeColunas,
+            numeroLinhas
         ));
         jTable1.setRowSelectionAllowed(true);
         jTable1.setCellSelectionEnabled(true);
@@ -150,6 +150,6 @@ public class Tabelas extends javax.swing.JPanel {
     private javax.swing.JButton jInserir;
     private javax.swing.JButton jPesquisar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    protected javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,4 +1,4 @@
-package Programa;
+package Programa.Entidades;
 
 public class Funcionario extends Pessoa{
     private String funcao;

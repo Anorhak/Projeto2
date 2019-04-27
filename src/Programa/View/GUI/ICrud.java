@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Programa;
+package Programa.View.GUI;
 
 /**
  *
  * @author Everton
  */
-class CelularMenu extends Menu {
-
-    public CelularMenu() {
-    }
-
+public interface ICrud {
+    public void inserir();
     
+    public void alterar();
+    
+    public void excluir();
+    
+    public Object Pesquisar();
 }
