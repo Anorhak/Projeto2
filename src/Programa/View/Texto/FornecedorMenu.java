@@ -9,9 +9,31 @@ package Programa.View.Texto;
  *
  * @author Everton
  */
-public class FornecedorMenu extends Menu {
+final class FornecedorMenu extends MenuFinal {
 
     public FornecedorMenu() {
+        this.tituloMenu = "Menu Fornecedor";
+        this.item = new String[]{"Inserir", "Alterar", "Pesquisar", "Excluir"};
+    }
+
+    @Override
+    public void inserir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void alterar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void excluir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void pesquisar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

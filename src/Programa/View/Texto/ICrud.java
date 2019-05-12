@@ -9,9 +9,12 @@ package Programa.View.Texto;
  *
  * @author Everton
  */
-interface ITela {
+interface ICrud {
+    public void inserir();
     
-    public void executar();
+    public void alterar();
     
-   
+    public void excluir();
+    
+    public void pesquisar();
 }

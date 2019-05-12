@@ -3,15 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Programa.View.Texto;
+package Programa.Util;
+
+import java.util.Scanner;
 
 /**
  *
  * @author Everton
  */
-interface ITela {
+public final class Util {
     
-    public void executar();
+    public static String ler(){
+        Scanner teclado = new Scanner(System.in);
+        return teclado.nextLine();
+    }
     
-   
 }

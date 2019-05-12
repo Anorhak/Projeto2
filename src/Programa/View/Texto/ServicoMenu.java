@@ -9,12 +9,32 @@ package Programa.View.Texto;
  *
  * @author Everton
  */
-class ServicoMenu extends Menu {
+final class ServicoMenu extends MenuFinal {
 
     public ServicoMenu() {
         this.tituloMenu = "Menu Serviço";
-        this.item = new String[]{"Inserir", "Pesquisar"," ","Cliente", "Funcionario", "Fornecedor" };
-        this.telas = new ITela[]{new ServicoMenu(), new ProdutoMenu(), new CelularMenu(), new ClienteMenu(), new FuncionarioMenu(), new FornecedorMenu()};
+         this.item = new String[]{"Inserir", "Alterar", "Pesquisar", "Excluir"};
+        
+    }
+
+    @Override
+    public void inserir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void alterar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void excluir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void pesquisar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

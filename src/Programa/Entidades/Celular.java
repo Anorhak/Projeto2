@@ -8,7 +8,6 @@ public class Celular {
     public Celular(String modelo, String marca) {
         this.modelo = modelo;
         this.marca = marca;
-        this.cd = cd;
     }
     
     public Celular(){
@@ -34,15 +33,4 @@ public class Celular {
     public int getCd() {
         return cd;
     }
-
-    public void setCd(int cd) {
-        this.cd = cd;
-    }
-
-
-
-
-
-    
-
 }

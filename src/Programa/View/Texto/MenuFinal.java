@@ -11,15 +11,15 @@ import Programa.Util.Util;
  *
  * @author Everton
  */
-abstract class Menu implements ITela {
+abstract class MenuFinal extends Menu implements ICrud {
 
-    protected String item[] = new String[1];
-    protected ITela[] telas = new ITela[1];
-    protected String tituloMenu = "";
-
+    public MenuFinal(){
+        this.tituloMenu = "";
+        this.item = new String[] {"Inserir", "Alterar", "Pesquisar", "Excluir"};
+    }
     @Override
     public void executar() {
-        int op = -1;
+         int op = -1;
         while (op != item.length) {
             System.out.println(tituloMenu);
             for (int i = 0; i < item.length; i++) {
@@ -28,13 +28,21 @@ abstract class Menu implements ITela {
             System.out.println(item.length + " - Sair");
             System.out.println("Escolha uma Opção");
             op = Integer.parseInt(Util.ler());
-            if (op >= 0 && op < item.length) {
-                telas[op].executar();
-            } else if (op != item.length) {
-                System.out.println("Opção Invalida");
+            switch (op){
+                case 0:
+                    inserir(); break;
+                case 1:
+                    alterar(); break;
+                case 2:
+                    pesquisar(); break;
+                case 3:
+                    excluir();break;
+                default:
+                    System.out.println("opção invalida");break;
+                    
             }
         }
-    } 
+    }
+    
     
 }
-    

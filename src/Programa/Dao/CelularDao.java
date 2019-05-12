@@ -1,13 +1,30 @@
 package Programa.Dao;
 
 import Programa.Entidades.Celular;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 
-public class CelularDao {
+public class CelularDao extends Dao{
 
    static  Celular[] vcel = new Celular[5];
    static  ArrayList<Celular> listacel = new ArrayList();
    static Celular aux = new Celular();
+   
+    PreparedStatement sql ;
+   
+ 
+   
+   
+   public void inserir(Celular cel) throws Exception{
+       con = new CelularDao().getConnection();
+       sql = con.prepareStatement("Insert into TbCelular values (null,?,?)");
+       sql.setString(1, cel.getMarca());
+       sql.setString(2, cel.getModelo());
+       sql.execute();
+   }
+
+    public CelularDao() {
+    }
    
    
     public boolean criarCelular(Celular exemplo) {
