@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Everton
  */
-public final class Util {
+public final class Scanners {
     
     public int lerInteiro(){
         Scanner teclado = new Scanner(System.in);
