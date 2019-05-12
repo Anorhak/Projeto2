@@ -5,7 +5,8 @@
  */
 package Programa.View.Texto;
 
-import Programa.Util.Util;
+import Programa.Util.Scanners;
+
 
 /**
  *
@@ -27,7 +28,7 @@ abstract class MenuFinal extends Menu implements ICrud {
             }
             System.out.println(item.length + " - Sair");
             System.out.println("Escolha uma Opção");
-            op = new Util().lerInteiro();
+            op = new Scanners().lerInteiro();
             switch (op){
                 case 0:
                     inserir(); break;

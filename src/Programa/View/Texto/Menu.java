@@ -5,7 +5,8 @@
  */
 package Programa.View.Texto;
 
-import Programa.Util.Util;
+import Programa.Util.Scanners;
+
 
 /**
  *
@@ -27,7 +28,7 @@ abstract class Menu implements ITela {
             }
             System.out.println(item.length + " - Sair");
             System.out.println("Escolha uma Opção");
-            op = new Util().lerInteiro();
+            op = new Scanners().lerInteiro();
             if (op >= 0 && op < item.length) {
                 telas[op].executar();
             } else if (op != item.length) {

@@ -5,7 +5,7 @@
  */
 package Programa.View.Texto;
 
-import Programa.Util.Util;
+import Programa.Util.Scanners;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -27,9 +27,9 @@ final class CelularMenu extends MenuFinal {
     public void inserir() {
         System.out.println("------Inserir Celular------");
         System.out.println("Por Favor Informe a Marca do Celular?");
-        String marca = new Util().lerString();
+        String marca = new Scanners().lerString();
         System.out.println("Por Favor Informe o Modelo do Celular.");
-        String modelo = new Util().lerString();
+        String modelo = new Scanners().lerString();
         try {
             new Programa.Dao.CelularDao().inserir(new Programa.Entidades.Celular(modelo, marca));
         } catch (Exception ex) {
@@ -47,7 +47,7 @@ final class CelularMenu extends MenuFinal {
         try {
             System.out.println("------Excluir Celular------");
             System.out.println("Por Favor Digite o Codigo do item q vc deseja excluir");
-            int opcao = new Util().lerInteiro();
+            int opcao = new Scanners().lerInteiro();
             new Programa.Dao.CelularDao().excluir(opcao);
 
         } catch (SQLException ex) {
@@ -68,7 +68,7 @@ final class CelularMenu extends MenuFinal {
             System.out.println("Selecione a opção por qual quer procurar ou selecione 0 "
                     + "para voltar ao " + this.tituloMenu);
             for (int i = 1; i < atributos.length; System.out.println(i + " - " + atributos[i++]));
-            int opcao = (new Util().lerInteiro());
+            int opcao = new Scanners().lerInteiro();
             switch (opcao) {
                 case 0:
                     break;
