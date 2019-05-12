@@ -2,16 +2,16 @@ package Programa.Dao;
 
 import Programa.Entidades.Celular;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class CelularDao extends Dao {
 
-    static Celular[] vcel = new Celular[5];
-    static ArrayList<Celular> listacel = new ArrayList();
-    static Celular aux = new Celular();
-
     PreparedStatement sql;
+    ResultSet rs;
 
     public void inserir(Celular cel) throws SQLException {
         try {
@@ -21,14 +21,48 @@ public class CelularDao extends Dao {
             sql.setString(2, cel.getModelo());
             sql.execute();
         } catch (Exception ex) {
-
+            ex.getMessage();
         } finally {
             sql.close();
             con.close();
         }
     }
 
-    public CelularDao() {
+    public void alterar() {
+
+    }
+
+    public ArrayList<Celular> pesquisarCodigo(int Cd) throws SQLException {
+        ArrayList<Celular> lista = new ArrayList();
+        try {
+            con = new CelularDao().getConnection();
+            sql = con.prepareStatement("Select * from TbCelular Where not CdCelular=0");
+            sql.execute();
+            rs = sql.getResultSet();
+            while (rs.next()) {
+                lista.add(new Celular(rs.getString("NmModelo"), rs.getString("NmMarca"), rs.getInt("CdCelular")));
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(CelularDao.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            rs.close();
+            sql.close();
+            con.close();
+        }
+        return lista;
+    }
+
+    public void excluir(int cd) throws SQLException {
+        try {
+            con = new CelularDao().getConnection();
+            sql = con.prepareStatement("Delete From TbCelular where CdCelular="+cd);
+            sql.execute();
+        } catch (Exception ex) {
+            Logger.getLogger(CelularDao.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            sql.close();
+            con.close();
+        }
     }
 
     public boolean criarCelular(Celular exemplo) {
@@ -80,12 +114,16 @@ public class CelularDao extends Dao {
 
     }
 
-    public void excluir(int cd) {
+    public void excluirOld(int cd) {
         for (int i = 0; i < vcel.length; i++) {
             if (vcel[i].getCd() == cd) {
                 vcel[i] = null;
             }
         }
     }
+
+    static Celular[] vcel = new Celular[5];
+    static ArrayList<Celular> listacel = new ArrayList();
+    static Celular aux = new Celular();
 
 }

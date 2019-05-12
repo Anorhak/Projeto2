@@ -27,7 +27,7 @@ abstract class MenuFinal extends Menu implements ICrud {
             }
             System.out.println(item.length + " - Sair");
             System.out.println("Escolha uma Opção");
-            op = Integer.parseInt(Util.ler());
+            op = new Util().lerInteiro();
             switch (op){
                 case 0:
                     inserir(); break;

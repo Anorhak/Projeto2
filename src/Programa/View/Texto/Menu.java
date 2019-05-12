@@ -27,7 +27,7 @@ abstract class Menu implements ITela {
             }
             System.out.println(item.length + " - Sair");
             System.out.println("Escolha uma Opção");
-            op = Integer.parseInt(Util.ler());
+            op = new Util().lerInteiro();
             if (op >= 0 && op < item.length) {
                 telas[op].executar();
             } else if (op != item.length) {

@@ -1,6 +1,7 @@
 package Programa.Entidades;
 
 public class Celular {
+
     private String modelo;
     private String marca;
     private int cd;
@@ -9,9 +10,14 @@ public class Celular {
         this.modelo = modelo;
         this.marca = marca;
     }
-    
-    public Celular(){
-    
+
+    public Celular(String modelo, String marca, int cd) {
+        this(modelo, marca);
+        this.marca = marca;
+    }
+
+    public Celular() {
+
     }
 
     public String getModelo() {

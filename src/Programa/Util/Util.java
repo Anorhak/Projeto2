@@ -13,7 +13,11 @@ import java.util.Scanner;
  */
 public final class Util {
     
-    public static String ler(){
+    public int lerInteiro(){
+        Scanner teclado = new Scanner(System.in);
+        return teclado.nextInt();    
+    }
+    public String lerString(){
         Scanner teclado = new Scanner(System.in);
         return teclado.nextLine();
     }
