@@ -15,7 +15,7 @@ public class CelularDao extends Dao {
 
     public void inserir(Celular cel) throws SQLException {
         try {
-            con = new CelularDao().getConnection();
+            con = getConnection();
             sql = con.prepareStatement("Insert into TbCelular values (null,?,?)");
             sql.setString(1, cel.getMarca());
             sql.setString(2, cel.getModelo());
@@ -28,14 +28,25 @@ public class CelularDao extends Dao {
         }
     }
 
-    public void alterar() {
-
+    public void alterar(String atributo, int cd, String novovalor) throws SQLException {
+        try {
+            con = getConnection();
+            sql = con.prepareStatement("Update tbcelular set "+atributo+"= ? Where cdcelular = ?");
+            sql.setString(1, novovalor);
+            sql.setInt(2, cd);
+            sql.execute();
+        } catch (Exception ex) {
+            Logger.getLogger(CelularDao.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            sql.close();
+            con.close();
+        }
     }
 
     public ArrayList<Celular> pesquisarCodigo(int Cd) throws SQLException {
         ArrayList<Celular> lista = new ArrayList();
         try {
-            con = new CelularDao().getConnection();
+            con = getConnection();
             sql = con.prepareStatement("Select * from TbCelular Where not CdCelular=0");
             sql.execute();
             rs = sql.getResultSet();
@@ -54,12 +65,12 @@ public class CelularDao extends Dao {
 
     public void excluir(int cd) throws SQLException {
         try {
-            con = new CelularDao().getConnection();
-            sql = con.prepareStatement("Delete From TbCelular where CdCelular="+cd);
+            con = getConnection();
+            sql = con.prepareStatement("Delete From TbCelular where CdCelular=" + cd);
             sql.execute();
         } catch (Exception ex) {
             Logger.getLogger(CelularDao.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
+        } finally {
             sql.close();
             con.close();
         }

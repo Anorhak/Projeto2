@@ -39,9 +39,23 @@ final class CelularMenu extends MenuFinal {
 
     @Override
     public void alterar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            String campos[] = new String[]{"NmModelo","NmMarca"};
+            System.out.println("------Alterar Celular------");
+            System.out.println("Por Favor Selecione oq vc quer alterar");
+            for (int i = 0; i < campos.length;System.out.println(i+" - "+campos[i++]));
+            int opcao = new Scanners().lerInteiro();
+            System.out.println("Por Favor Digite o novo "+campos[opcao]);
+            String novo = new Scanners().lerString();
+            System.out.println("Por Favor Digite o codigo do item que vc deseja alterar");
+            int cd = new Scanners().lerInteiro();
+            new Programa.Dao.CelularDao().alterar(campos[opcao],cd,novo);
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(CelularMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
-
     @Override
     public void excluir() {
         try {
